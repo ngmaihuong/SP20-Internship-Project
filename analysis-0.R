@@ -2,12 +2,12 @@
 #Dickinson College
 #Suzy Inc.
 #Date created: 2/29/2020
-#Date last updated: 2/29/2020
+#Date last updated: 3/1/2020
 #Project: Talent Acquisition Analytics SP20
 
 install.packages("arsenal")
 
-#Opening tools ----
+#Opening Tools ----
 library(base)
 library(httr)
 library(readxl)
@@ -63,7 +63,15 @@ master_canrec_mod <- master_canrec_mod %>% select(FirstName:Disposition, Origin)
   #clean for necessary variables only
 summary(master_canrec_mod)
 
-#CODE TESTING ----
+rm(candidaterec0, candidaterec1, candidaterec2, candidaterec3, candidaterec4, candidaterec5, master_canrec)
+
+#Master Data Frame Cleaning ----
+
+master_canrec_mod1 <-separate(master_canrec_mod, Source, c("Source","SourceDetails"), sep=": ", remove=T)
+#The source column is quite confusing and contain cumulative information 
+#so I am trying to separate it in order to use group_by(), hopefully to separate dataset for effective analysis
+
+#Code Testing ----
 
 #vec1 <- c("a","b","c","d")
 #vec2 <- c(1,2,3,4)
@@ -79,4 +87,19 @@ summary(master_canrec_mod)
 
 #df3 <- rbind(df1,df2)
 
-#Question: IS THERE A WAY TO MERGE DATA FRAMES WHILE ONLY KEEP THE COLUMNS AS IN candidaterec0_mod1?
+#IS THERE A WAY TO MERGE DATA FRAMES WHILE ONLY KEEP THE COLUMNS AS IN candidaterec0_mod1?
+
+#Analysis ----
+
+source_pop <- master_canrec_mod1 %>% group_by(Source) %>% count(Source) %>% arrange(desc(n))
+sum(source_pop$n) #because I am not sure if NA obsverations are automatically altered
+
+source_d_pop <- master_canrec_mod1 %>% group_by(SourceDetails) %>% count(SourceDetails) %>% arrange(desc(n))
+sum(source_d_pop$n)
+
+#To find the records of candidates from a certain source: An example - "Added manually"
+addman <- master_canrec_mod1
+addman$SourceDetails <- ifelse(addman$SourceDetails == "Added manually", T, F)
+
+addman <- addman %>% filter(SourceDetails == T)
+#The output returns 163 candidates whose data had been imported manually into the system
