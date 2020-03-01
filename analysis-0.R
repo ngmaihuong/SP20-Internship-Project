@@ -2,7 +2,7 @@
 #Dickinson College
 #Suzy Inc.
 #Date created: 2/29/2020
-#Date last updated:
+#Date last updated: 2/29/2020
 #Project: Talent Acquisition Analytics SP20
 
 install.packages("arsenal")
@@ -79,3 +79,4 @@ summary(master_canrec_mod)
 
 #df3 <- rbind(df1,df2)
 
+#Question: IS THERE A WAY TO MERGE DATA FRAMES WHILE ONLY KEEP THE COLUMNS AS IN candidaterec0_mod1?
