@@ -1736,5 +1736,2595 @@
       }
     ],
     "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "value",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "FirstName",
+          "expression": "value",
+          "columnName": "FirstName",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "NOT_HEADLESS",
+                "l": "NOT_HEADLESS"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "value",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "FirstName",
+          "expression": "value",
+          "columnName": "FirstName",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "IMA",
+                "l": "IMA"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "value",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Source",
+          "expression": "value",
+          "columnName": "Source",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Import",
+                "l": "Import"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Added manually, BuiltInNYC, Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltInNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Added manually, Matt B's Network",
+                "l": "Added manually, Matt B's Network"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Import"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Source",
+          "expression": "value",
+          "columnName": "Source",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Employee",
+                "l": "Employee"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Added manually, Matt B's Network"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Matt Britton"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sofia_-_Chief"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sofia Hernandez"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sofia_RC_Slack"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sofia Hernandez"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sofia's_VP_Client_Success_Link"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sofia Hernandez"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Patrick_Espe's_SDR_Referral_Link"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Patrick Espe"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Patrick Espe",
+                "l": "Patrick Espe"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job Board"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Abel's_Jobs_Link"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Abel Flint"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Abel Flint",
+                "l": "Abel Flint"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job Board"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Added manually, Indeed"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indeed"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Added manually, Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Job site"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Added manually, LinkedIn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Added manually, LinkedIn Search"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Angellist_Ad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Angellist"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Anthony's_Link"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Anthony Onesto"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Anthony'sNetwork, LinkedIn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Anthony Onesto"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltinNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "dean eaton"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dean Eaton"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Dennis_Yip_Referral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dennis Yip"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Alla Cheremoshnyuk",
+                "l": "Alla Cheremoshnyuk"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Import"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Alla Cheremoshnyuk",
+                "l": "Alla Cheremoshnyuk"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Starred Rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Job site, LinkedIn, LinkedInJobs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltInNYC, Job site, LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Job site, LinkedInJobs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltInNYC, Job site, LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Customer_Support_Rep_Datondra's_Link",
+                "l": "Customer_Support_Rep_Datondra's_Link"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Dan, LinkedIn, Matt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Matt Britton"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Dean Eaton",
+                "l": "Dean Eaton"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Import"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "glassdoor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glassdoor"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Glassdoor, Job site, LinkedInJobs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glassdoor, Job site, LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Handshake_Campus_Link"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Handshake"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Indeed Ad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indeed"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Indeed_Ad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indeed"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Indeed_Prime"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indeed"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Jesse_F's_SDR_Referral_Link"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Jesse Forman"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "John_C._Sr._SDR_Referral_Link"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "John Cushman"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "kate murphy"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kate Murphy"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LinkedIn_Ad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LinkedIn_Adhttps://app.jobvite.com/j?aj=oSli9fwo,LinkedIn_Ad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LinkedIn_Candidate_Message"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LinkedIn_Inmail"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "LinkedIn_Search",
+                "l": "LinkedIn_Search"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Origin",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "sourced"
+      }
+    ],
+    "description": "Mass edit cells in column Origin"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "LinkedIn_Search",
+                "l": "LinkedIn_Search"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Origin",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sourced"
+      }
+    ],
+    "description": "Mass edit cells in column Origin"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LinkedIn_Search"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LinkedIn_Status_Update"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LinkedInFree"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Matt_C._SDR_Referral_Link",
+                "l": "Matt_C._SDR_Referral_Link"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job Board"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Matt_C._SDR_Referral_Link"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Matt Croteau"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Michael_B's_Facebook_Design_Group"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Facebook"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Facebook_NYC_Ad_Jobs_Networking_Group"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Facebook"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Stackoverflow_Ad",
+                "l": "Stackoverflow_Ad"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Origin",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "applied"
+      }
+    ],
+    "description": "Mass edit cells in column Origin"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Stackoverflow_Ad",
+                "l": "Stackoverflow_Ad"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Origin",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "applied"
+      }
+    ],
+    "description": "Mass edit cells in column Origin"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Origin",
+          "expression": "value",
+          "columnName": "Origin",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "applied",
+                "l": "applied"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Stackoverflow_Ad"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Stackoverflow"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Stackoverflow_Search",
+                "l": "Stackoverflow_Search"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Origin",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sourced"
+      }
+    ],
+    "description": "Mass edit cells in column Origin"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Stackoverflow_Search",
+                "l": "Stackoverflow_Search"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Origin",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "sourced"
+      }
+    ],
+    "description": "Mass edit cells in column Origin"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Stackoverflow_Search"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Stackoverflow"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "University_Alabama_Birmingham_Purple_Briefcase_Link",
+                "l": "University_Alabama_Birmingham_Purple_Briefcase_Link"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job Board"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Campus"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "University_Alabama_Birmingham_Purple_Briefcase_Link"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "University of Alabama - Birmingham"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "NYU_Joblink",
+                "l": "NYU_Joblink"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job Board"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Campus"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NYU_Joblink"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New York University"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Working_Not_Working"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Working Not Working"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Indeed, Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indeed"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Indeed, Job site, LinkedIn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indeed"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltinNYC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltinNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Glassdoor, Indeed, Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltinNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Glassdoor, Indeed, Job site, LinkedIn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltinNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Glassdoor, Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltinNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Indeed, Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltinNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Indeed, Job site, LinkedInJobs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltinNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltinNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Job site, LinkedIn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BuiltinNYC"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Job site, LinkedIn, themuse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "themuse"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Job site, LinkedInJobs, themuse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "themuse"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BuiltInNYC, Job site, themuse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "themuse"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Glassdoor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glassdoor"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Glassdoor, Indeed, Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glassdoor"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Glassdoor, Indeed, Job site, LinkedInJobs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glassdoor"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Glassdoor, Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glassdoor"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Glassdoor, Job site, LinkedIn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glassdoor"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Glassdoor, Job site, Referral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Glassdoor"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Glassdoor, Job site, themuse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "themuse"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Indeed, Job site, LinkedIn, LinkedInJobs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indeed"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Indeed, Job site, LinkedInJobs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indeed"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Indeed, Job site, Social referral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indeed"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Indeed, Job site, themuse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "themuse"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, LinkedIn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, LinkedIn, LinkedInJobs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, LinkedIn, Referral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, LinkedIn, Social referral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, LinkedIn, themuse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "themuse"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, LinkedInJobs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LinkedIn"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, LinkedInJobs, themuse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "themuse"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, themuse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "themuse"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, ZipRecruite"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ZipRecruiter"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, ZipRecruiter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ZipRecruiter"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Jobvite"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Job site"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, Referral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Referral"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, Referral, Social referral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Referral"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site, Social referral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Referral"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "suzy"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Suzy"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "suzy - Desktop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Suzy"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "suzy - Mobile"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Suzy"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "suzy - Tablet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Suzy"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SV Academy (contact@sv.academy)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SV Academy"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SV Academy (jacob@sv.academy)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SV Academy"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Wendy AI Recruiter (hello@wendy.ai)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wendy AI Recruiter"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Jacob Suggs (jacob@sv.academy)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SV Academy"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
   }
 ]
