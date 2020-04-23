@@ -1,8 +1,7 @@
 #Name: Nguyen, Sierra
 #Dickinson College
-#Suzy Inc.
 #Date created: 2/29/2020
-#Date last updated: 3/1/2020
+#Date last updated: 3/10/2020
 #Project: Talent Acquisition Analytics SP20
 
 install.packages("arsenal")
@@ -18,6 +17,7 @@ library(tidyr)
 library(GGally)
 library(hexbin)
 library(arsenal)
+library(lubridate)
 
 #Data Preparation ----
 candidaterec0 <- read.csv("CandidateRecordsA_0637171477619300500.csv")
@@ -65,11 +65,16 @@ summary(master_canrec_mod)
 
 rm(candidaterec0, candidaterec1, candidaterec2, candidaterec3, candidaterec4, candidaterec5, master_canrec)
 
-#Master Data Frame Cleaning ----
+#Master Data Frame Modification in Preparation for the Cleaning Step ----
 
-master_canrec_mod1 <-separate(master_canrec_mod, Source, c("Source","SourceDetails"), sep=": ", remove=T)
+master_canrec_mod1 <- separate(master_canrec_mod, Source, c("Source","SourceDetails"), sep=": ", remove=T)
 #The source column is quite confusing and contain cumulative information 
 #so I am trying to separate it in order to use group_by(), hopefully to separate dataset for effective analysis
+
+master_canrec_mod1$Submitted <- mdy_hm(master_canrec_mod1$Submitted,tz="EST")
+master_canrec_mod1$LastUpdate <- mdy_hm(master_canrec_mod1$LastUpdate,tz="EST")
+
+write.csv(master_canrec_mod1, "full_dataset_uncleaned", row.names = F) #export the dataset to clean in OpenRefine
 
 #Code Testing ----
 
@@ -103,3 +108,10 @@ addman$SourceDetails <- ifelse(addman$SourceDetails == "Added manually", T, F)
 
 addman <- addman %>% filter(SourceDetails == T)
 #The output returns 163 candidates whose data had been imported manually into the system
+
+#Examine the "Import" source
+imported <- master_canrec_mod1
+imported$Source <- ifelse(imported$Source == "Import", T, F)
+
+imported <- imported %>% filter(Source == T)
+source_imp <- imported %>% group_by(SourceDetails) %>% count(SourceDetails) %>% arrange(desc(n))
