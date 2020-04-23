@@ -1,0 +1,1712 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sales Director",
+          "Director, Sales"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sales Director"
+      },
+      {
+        "from": [
+          "Director, Business Development",
+          "Business Development Director"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Business Development Director"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Intern\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Intern",
+                "l": "Intern"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Copywriter Intern- Paid"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Copywriter Intern"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Intern\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Intern",
+                "l": "Intern"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Finance/Accounting Intern - Immediate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Finance/Accounting Intern"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Intern\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Intern",
+                "l": "Intern"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Client Success, Summer Intern"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Client Success Intern"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Intern\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Intern",
+                "l": "Intern"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Marketing Intern - Summer 2019"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Marketing Intern"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Intern\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Intern",
+                "l": "Intern"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Talent Acquisition Intern, Spring Semester"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Talent Acquisition Intern"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Intern\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Intern",
+                "l": "Intern"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Admin Assistant Intern- Immediate Fill"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Administrative Assistant Intern"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Intern\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Intern",
+                "l": "Intern"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Business Development, Summer Intern"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Business Development Intern"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\",\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sr. Manager, Revenue Operations"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager, Revenue Operations"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\",\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sr. Program Manager, Client Success"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Program Manager, Client Success"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\",\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SVP, Marketing"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Vice President, Marketing"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\",\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "VP, Engineering / CTO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vice President, Engineering / CTO"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Senior\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Senior",
+                "l": "Senior"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Front End Developer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Front-End Developer"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Senior\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Senior",
+                "l": "Senior"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Influencer Relations Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager, Influencer Relations"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Senior\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Senior",
+                "l": "Senior"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Sales & Marketing Operations Analyst"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Analyst, Sales & Marketing Operations"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Associate Director of Influencer Relations"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Associate Director, Influencer Relations"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Business Development Sr. Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager, Business Development"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Client Success Manager - Market Research"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Client Success Manager, Market Research"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Community Manager - Consultant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Community Manager, Consultant"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Copywriter - Part Time"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Copywriter"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Customer Advocate (Support)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Customer Advocate"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sr. FP&A Analyst"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Analyst, FP&A"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "VP Sales and Brand Partnerships"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vice President, Sales and Brand Partnerships"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Vice President Data and Insights"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vice President, Data and Insights"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SVP of Marketing"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Vice President, Marketing"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Sr.\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Sr.",
+                "l": "Sr."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sr. Product Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Product Manager"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Sr.\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Sr.",
+                "l": "Sr."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sr. Sales Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Sales Manager"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Sr.\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Sr.",
+                "l": "Sr."
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sr. Sales Specialist"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Sales Specialist"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Back End Lead"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Back-End Lead"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Administrative Assistant Intern"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Intern, Administrative Assistant"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Intern, Administrative Assistant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Administrative Assistant Intern"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "IT Analyst (Helpdesk)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IT Analyst"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Manager, Office Experience"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Office Experience Manager"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\",\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Account Supervisor, Client Success"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Client Success Account Supervisor"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\",\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Associate Director, Influencer Relations"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Influencer Relations Associate Director"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\",\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Community Manager, Consultant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Community Manager, Consultant"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\",\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Digital Designer, SaaS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SaaS Digital Designer"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\",\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": ",",
+                "l": ","
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Manager, Strategic Relationships"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Strategic Relationships Manager"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sales Development Representative (SDR)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sales Development Representative"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Manager\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Manager",
+                "l": "Manager"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Product Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager, Product"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Manager\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Manager",
+                "l": "Manager"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Sales Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager, Sales"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Director\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Director",
+                "l": "Director"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Business Development Director"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Director, Business Development"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Director\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Director",
+                "l": "Director"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Director of Network Managemet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Director, Network Managemet"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Director\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Director",
+                "l": "Director"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Director, Network Managemet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Director, Network Management"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Director\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Director",
+                "l": "Director"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Director of Sales"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Director, Sales"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Director\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Director",
+                "l": "Director"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Director of Product Management"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Director, Product Management"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Director\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Director",
+                "l": "Director"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sales Director"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Director, Sales"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"-\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "-",
+                "l": "-"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Software Developer - Xamarin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Software Developer"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Stack\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Stack",
+                "l": "Stack"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Full Stack Engineer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Full-Stack Engineer"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Stack\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Stack",
+                "l": "Stack"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Full Stack Ruby Developer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Full-Stack Ruby Developer"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"(\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(",
+                "l": "("
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "RequisitionTitle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Freelance Art Designer (temp)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Freelance Art Designer"
+      }
+    ],
+    "description": "Mass edit cells in column RequisitionTitle"
+  }
+]
