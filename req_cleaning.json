@@ -1,0 +1,122 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Category",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Member"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Marketing"
+      }
+    ],
+    "description": "Mass edit cells in column Category"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Category",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Finance & Accounting"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Operations"
+      }
+    ],
+    "description": "Mass edit cells in column Category"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Category",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Creative"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Product & Technology"
+      }
+    ],
+    "description": "Mass edit cells in column Category"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Category",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Administrative"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Operations"
+      }
+    ],
+    "description": "Mass edit cells in column Category"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Category",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Data & Insights"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Product & Technology"
+      }
+    ],
+    "description": "Mass edit cells in column Category"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Category",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "People Operations"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Operations"
+      }
+    ],
+    "description": "Mass edit cells in column Category"
+  }
+]
