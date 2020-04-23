@@ -9883,5 +9883,2353 @@
       }
     ],
     "description": "Mass edit cells in column Department"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "RequisitionTitle",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "JobLevel",
+    "columnInsertIndex": 3,
+    "description": "Create column JobLevel at index 3 based on column RequisitionTitle using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ".NET Back-End Software Developer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Accounting & Finance Associate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Business Development Associate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Client Success Associate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Computational Statistician"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Content Writer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Contract Marketing Automation Specialist"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Contract Recruiter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Copywriter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Customer Advocate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Customer Support Representative"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Data Analyst"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DevOps Engineer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DevOps/SRE Engineer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Digital Design Consultant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Digital Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Digital Marketing Analyst"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Director\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Director",
+                "l": "Director"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "\"\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column JobLevel using expression \"\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Vice President\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Vice President",
+                "l": "Vice President"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "\"\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column JobLevel using expression \"\""
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Vice President"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Intern\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Intern",
+                "l": "Intern"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "\"\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column JobLevel using expression \"\""
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Intern"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "User Growth Specialist"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "UI Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "UX Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Engineer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Engineer",
+                "l": "Engineer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Full-Stack Engineer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Engineer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Engineer",
+                "l": "Engineer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Lead Full-Stack Engineer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Engineer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Engineer",
+                "l": "Engineer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Quality Assurance Automation Engineer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Engineer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Engineer",
+                "l": "Engineer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Software Engineer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Designer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Designer",
+                "l": "Designer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Freelance Art Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Designer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Designer",
+                "l": "Designer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Freelance UX Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Designer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Designer",
+                "l": "Designer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Lead UX Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Designer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Designer",
+                "l": "Designer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SaaS Digital Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Designer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Designer",
+                "l": "Designer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Digital Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "JobLevel",
+          "expression": "grel:value.find(\"Designer\")",
+          "columnName": "JobLevel",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Designer",
+                "l": "Designer"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior UX Designer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Back-End Lead"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Executive Assistant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Freelance Copyeditor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Front End Lead"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "GCL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Front-End Developer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Help Desk and Moderation Support"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "IT Analyst"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Junior Accountant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Junior Front-End Developer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Junior Operations Analyst"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Junior Quality Assurance Associate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Software Developer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Network Management Specialist"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Network Ops Associate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Network Ops Specialist"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Office Experience Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Office Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Operations Project Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "People Associate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Recruiter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Research Analyst"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sales Development Representative"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Accountant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Analyst, FP&A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Analyst, Programmatic Media"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Analyst, Sales & Marketing Operations"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Enterprise Account Executive"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Front-End Developer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Full-Stack Ruby Developer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Sales Development Representative"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Sales Specialist"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Software Developer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Account Executive"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Enterprise Account Sales Executive"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Business Development Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Client Success Account Supervisor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Client Success Manager, Brand Strategy"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Client Success Manager, Consumer Insights"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Client Success Manager, Market Research"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Client Success Manager, Self Service"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Community Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Community Manager, Consultant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Employee"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Creative Project Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Customer Support Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Digital Marketing Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Digital Project Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Head of Sales"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Marketing Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Marketing Project Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Product Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Product Marketing Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Program Manager, Client Success"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Program Manager, Socialstars"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Project Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Quality Assurance Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Research Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sales Development Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sales Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sales Operations Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Strategic Relationships Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RequisitionTitle",
+          "expression": "grel:value.find(\"Lead\")",
+          "columnName": "RequisitionTitle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Lead",
+                "l": "Lead"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Employee"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Manager/Supervisor/Lead"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Manager, Business Development"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Manager, Influencer Relations"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Manager, Product"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Manager, Revenue Operations"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Manager, Sales"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobLevel",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Senior Program Manager, Client Success"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Senior Manager"
+      }
+    ],
+    "description": "Mass edit cells in column JobLevel"
   }
 ]
