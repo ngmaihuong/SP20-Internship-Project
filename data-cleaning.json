@@ -9808,5 +9808,65 @@
       }
     ],
     "description": "Mass edit cells in column JobLevel"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CS_CSM_Social",
+                "l": "CS_CSM_Social"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CS_CSM_Social"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Social Event"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SourceDetails",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job site"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Suzy"
+      }
+    ],
+    "description": "Mass edit cells in column SourceDetails"
   }
 ]
