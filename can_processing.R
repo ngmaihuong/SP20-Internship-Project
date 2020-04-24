@@ -1,7 +1,7 @@
 #Name: Nguyen, Sierra
 #Dickinson College
 #Date created: 2/29/2020
-#Date last updated: 3/10/2020
+#Date last updated: 4/24/2020
 #Project: Talent Acquisition Analytics SP20
 
 install.packages("arsenal")
@@ -19,7 +19,7 @@ library(hexbin)
 library(arsenal)
 library(lubridate)
 
-#Data Preparation ----
+#Data Processing (Part 1) ----
 candidaterec0 <- read.csv("CandidateRecordsA_0637171477619300500.csv")
 candidaterec1 <- read.csv("CandidateRecordsA_1637171515153834517.csv")
 candidaterec2 <- read.csv("CandidateRecordsA_2637171552633563593.csv")
@@ -65,7 +65,7 @@ summary(master_canrec_mod)
 
 rm(candidaterec0, candidaterec1, candidaterec2, candidaterec3, candidaterec4, candidaterec5, master_canrec)
 
-#Master Data Frame Modification in Preparation for the Cleaning Step ----
+#Master Data Frame Modification in Preparation for the Cleaning Phase ----
 
 master_canrec_mod1 <- separate(master_canrec_mod, Source, c("Source","SourceDetails"), sep=": ", remove=T)
 #The source column is quite confusing and contain cumulative information 
@@ -76,25 +76,7 @@ master_canrec_mod1$LastUpdate <- mdy_hm(master_canrec_mod1$LastUpdate,tz="EST")
 
 write.csv(master_canrec_mod1, "full_dataset_uncleaned", row.names = F) #export the dataset to clean in OpenRefine
 
-#Code Testing ----
-
-#vec1 <- c("a","b","c","d")
-#vec2 <- c(1,2,3,4)
-#vec3 <- c("A","B","C","D")
-#vec4 <- c(T,T,F,T)
-#df1 <- data.frame(vec1,vec2,vec3,vec4)
-
-#vec1 <- c("mot","hai","ba","bon")
-#vec2 <- c("one","two","three","four")
-#vec3 <- c(F,F,F,T)
-#vec4 <- c(9,8,7,6)
-#df2 <- data.frame(vec1,vec2,vec3,vec4)
-
-#df3 <- rbind(df1,df2)
-
-#IS THERE A WAY TO MERGE DATA FRAMES WHILE ONLY KEEP THE COLUMNS AS IN candidaterec0_mod1?
-
-#Analysis ----
+#Test Analysis ----
 
 source_pop <- master_canrec_mod1 %>% group_by(Source) %>% count(Source) %>% arrange(desc(n))
 sum(source_pop$n) #because I am not sure if NA obsverations are automatically altered
@@ -115,3 +97,20 @@ imported$Source <- ifelse(imported$Source == "Import", T, F)
 
 imported <- imported %>% filter(Source == T)
 source_imp <- imported %>% group_by(SourceDetails) %>% count(SourceDetails) %>% arrange(desc(n))
+
+#Data Processing (Part 2) ----
+#This step takes place after I have processed Requisitions dataset and cleaned the Master Candidate dataset
+req <- read.csv("part_requisitions_cleaned.csv")
+master_data <- read.csv("full_dataset_cleaned_2.csv")
+
+#pick out only 2 columns I need to join
+req <- req %>% select(RequisitionId, Category)
+
+#add Category column to the Master data frame
+master_data_1 <- left_join(master_data, req, by=c("RequisitionID"="RequisitionId")) 
+master_data_2 <- master_data_1 %>% group_by(Category) %>% count(Category)
+
+#move Category column inward for visibility
+master_data_1 <- master_data_1[,c(1:3,14,4:13)] 
+
+write.csv(master_data_1, "comp_data", row.names = F)
