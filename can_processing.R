@@ -1,7 +1,7 @@
 #Name: Nguyen, Sierra
 #Dickinson College
 #Date created: 2/29/2020
-#Date last updated: 4/24/2020
+#Date last updated: 4/26/2020
 #Project: Talent Acquisition Analytics SP20
 
 install.packages("arsenal")
@@ -100,8 +100,10 @@ source_imp <- imported %>% group_by(SourceDetails) %>% count(SourceDetails) %>% 
 
 #Data Processing (Part 2) ----
 #This step takes place after I have processed Requisitions dataset and cleaned the Master Candidate dataset
+setwd("~/Downloads/Suzy_02122020223915/Requisitions")
 req <- read.csv("part_requisitions_cleaned.csv")
-master_data <- read.csv("full_dataset_cleaned_2.csv")
+setwd("~/Downloads/Suzy_02122020223915/Candidates")
+master_data <- read.csv("full_dataset_cleaned_3.csv")
 
 #pick out only 2 columns I need to join
 req <- req %>% select(RequisitionId, Category)
