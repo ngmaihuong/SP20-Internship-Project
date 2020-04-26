@@ -9868,5 +9868,85 @@
       }
     ],
     "description": "Mass edit cells in column SourceDetails"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Social Event",
+                "l": "Social Event"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job Board"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Career Site"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "SourceDetails",
+          "expression": "value",
+          "columnName": "SourceDetails",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Facebook",
+                "l": "Facebook"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Source",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Job Board"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Career Site"
+      }
+    ],
+    "description": "Mass edit cells in column Source"
   }
 ]
