@@ -9948,5 +9948,1464 @@
       }
     ],
     "description": "Mass edit cells in column Source"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Offer Accepted"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hired"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Rejected by Hiring Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Hired",
+                "l": "Hired"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Interview"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hired"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Hired",
+                "l": "Hired"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "New"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hired"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Hired",
+                "l": "Hired"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Offer Sent"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hired"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Hired",
+                "l": "Hired"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "View"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hired"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Interviewed & no match",
+                "l": "Interviewed & no match"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pipeline"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Compensation requirement too high",
+                "l": "Compensation requirement too high"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pipeline"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Declined Offer ",
+                "l": "Declined Offer "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Interview"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Offer Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Does not meet the basic qualifications",
+                "l": "Does not meet the basic qualifications"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Recruiter Phone Screen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Does not meet the basic qualifications",
+                "l": "Does not meet the basic qualifications"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "New"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Does not meet the basic qualifications",
+                "l": "Does not meet the basic qualifications"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Interview"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Does not meet the basic qualifications",
+                "l": "Does not meet the basic qualifications"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "View"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Candidate withdrew ",
+                "l": "Candidate withdrew "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hiring Manager Phone Screen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candidate Withdrew"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Candidate withdrew ",
+                "l": "Candidate withdrew "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Interview"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candidate Withdrew"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Candidate withdrew ",
+                "l": "Candidate withdrew "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "New"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candidate Withdrew"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Candidate withdrew ",
+                "l": "Candidate withdrew "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pipeline"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candidate Withdrew"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Candidate withdrew ",
+                "l": "Candidate withdrew "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Recruiter Phone Screen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candidate Withdrew"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Candidate withdrew ",
+                "l": "Candidate withdrew "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Rejected"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candidate Withdrew"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Candidate withdrew ",
+                "l": "Candidate withdrew "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "View"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candidate Withdrew"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Not interviewed",
+                "l": "Not interviewed"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Recruiter Phone Screen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Not interviewed",
+                "l": "Not interviewed"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pipeline"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Not interviewed",
+                "l": "Not interviewed"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Interview"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Not interviewed",
+                "l": "Not interviewed"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hiring Manager Phone Screen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Not interviewed",
+                "l": "Not interviewed"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Submit to Hiring Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Not interviewed",
+                "l": "Not interviewed"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TBD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Not interviewed",
+                "l": "Not interviewed"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "View"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Phone interview & no match",
+                "l": "Phone interview & no match"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Interview"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Phone interview & no match",
+                "l": "Phone interview & no match"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pipeline"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Position closed ",
+                "l": "Position closed "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Contacted"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Position closed ",
+                "l": "Position closed "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Interview"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Position closed ",
+                "l": "Position closed "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pipeline"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Position closed ",
+                "l": "Position closed "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Reference Check"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hired"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Position closed ",
+                "l": "Position closed "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Submit to Hiring Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Offer Sent"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Offer Rejected"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Project/Presentation"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pipeline"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Approved by Hiring Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pipeline"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hiring Manager Phone Screen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Interview"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Disposition",
+          "expression": "value",
+          "columnName": "Disposition",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Status",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Submit to Hiring Manager"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pipeline"
+      }
+    ],
+    "description": "Mass edit cells in column Status"
   }
 ]
