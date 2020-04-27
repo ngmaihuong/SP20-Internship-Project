@@ -94,7 +94,8 @@ full_data %>%
   ggplot(aes(x=fct_rev(fct_infreq(JobLevel)))) + 
   geom_bar(aes(fill = JobLevel)) + 
   scale_fill_manual(values = brewer.pal(nlevels(full_data$JobLevel), name ="Set2")) +
-  labs(title="Fig 4a. Distribution of Applications across Job Levels", x="Levels of Job", y="Count") + 
+  labs(title="Fig 4a. Distribution of Applications across Job Levels (no Open Resume Submission", 
+       x="Levels of Job", y="Count") + 
   coord_flip()
 
 full_data %>%
@@ -102,18 +103,19 @@ full_data %>%
   group_by(Source, JobLevel) %>% 
   summarise(count=n()) %>% 
   ggplot(aes(x=JobLevel, y=count)) +
-#  scale_fill_manual(values = brewer.pal(nlevels(full_data$Source), name ="Set3")) +
+  scale_fill_manual(values = brewer.pal(nlevels(full_data$Source), name ="Set1")) +
   labs(title="Fig 5a. Popularity of Type of Source for Candidates of Each Job Level", 
        x="Levels of Job", y="Count") +
-  geom_bar(stat="identity",position="dodge",aes(fill=Source)) + coord_flip()
+  geom_bar(stat="identity", position="fill", aes(fill=Source)) + coord_flip()
 
 full_data %>%
   filter(JobLevel != "Open Resume Submission", Source != "Import") %>% 
   group_by(Source, JobLevel) %>% 
   summarise(count=n()) %>% 
   ggplot(aes(x=Source, y=count)) +
+  scale_fill_manual(values = brewer.pal(nlevels(full_data$JobLevel), name ="Set2")) +
   labs(title="Fig 5b. Distribution of Applications to Different Job Levels coming from Each Type of Source", 
        x="Types of Sources", y="Count") +
-  geom_bar(stat="identity",position="dodge",aes(fill=JobLevel)) + coord_flip()
+  geom_bar(stat="identity", position="fill", aes(fill=JobLevel)) + coord_flip()
 
 #fig4a <- plot_ly(x = data_5$JobLevel, y = data_5$n, name = "Test Plotly chart", type = "bar")
