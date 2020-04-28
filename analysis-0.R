@@ -1,7 +1,7 @@
 #Name: Nguyen, Sierra
 #Dickinson College
 #Date created: 4/22/2020
-#Date last updated: 4/27/2020
+#Date last updated: 4/28/2020
 #Project: Talent Acquisition Analytics SP20
 
 #Opening Tools ----
@@ -85,12 +85,13 @@ fig3a
 #pie3D(slices,labels=data_4_labels,theta=pi/3,border="white",explode=0.75,main="Pie Chart")
 
 #What source receives the highest quality applications?
-full_data %>% 
-  ggplot(aes(x=fct_rev(fct_infreq(JobLevel)))) + 
-  geom_bar(aes(fill = JobLevel)) + 
-  #  scale_fill_manual(values = brewer.pal(nlevels(full_data$JobLevel), name ="Set2")) +
-  labs(title="Fig 4. Distribution of Applications across Job Levels", x="Levels of Job", y="Count") + 
-  coord_flip()
+
+# full_data %>% 
+#   ggplot(aes(x=fct_rev(fct_infreq(JobLevel)))) + 
+#   geom_bar(aes(fill = JobLevel)) + 
+#   #  scale_fill_manual(values = brewer.pal(nlevels(full_data$JobLevel), name ="Set2")) +
+#   labs(title="Fig 4. Distribution of Applications across Job Levels", x="Levels of Job", y="Count") + 
+#   coord_flip()
 # full_data %>% 
 #   filter(JobLevel != "Open Resume Submission") %>% 
 #   ggplot(aes(x=fct_rev(fct_infreq(JobLevel)))) + 
@@ -106,9 +107,9 @@ full_data %>%
   summarise(count=n()) %>% 
   ggplot(aes(x=JobLevel, y=count)) +
   #  scale_fill_manual(values = brewer.pal(nlevels(full_data$Source), name ="Set3")) +
-  labs(title="Fig 5a. Shares of Types of Source among \nCandidates of Each Job Level", 
+  labs(title="Fig 4a. Shares of Types of Source among \nCandidates of Each Job Level", 
        x="Levels of Job", y="Shares of Types of Source") +
-  geom_bar(stat="identity", position="fill", aes(fill=Source)) + coord_flip()
+  geom_bar(stat="identity", position="fill", color = "white", aes(fill=Source)) + coord_flip()
 
 full_data %>%
   filter(JobLevel != "Open Resume Submission", Source != "Import") %>% 
@@ -116,17 +117,26 @@ full_data %>%
   summarise(count=n()) %>% 
   ggplot(aes(x=Source, y=count)) +
   #  scale_fill_manual(values = brewer.pal(nlevels(full_data$JobLevel), name ="Set2")) +
-  labs(title="Fig 5b. Shares of Applications to Different Job Levels \ncoming from Each Type of Source", 
+  labs(title="Fig 4b. Shares of Applications to Different Job Levels \ncoming from Each Type of Source", 
        x="Types of Source", y="Shares of Job Levels") +
-  geom_bar(stat="identity", position="fill", aes(fill=JobLevel)) + coord_flip()
+  geom_bar(stat="identity", position="fill", color = "white", aes(fill=JobLevel)) + coord_flip()
 
 full_data %>%
   filter(JobLevel != "Open Resume Submission", Source != "Import") %>% 
   group_by(JobLevel, Status) %>% 
   summarise(count=n()) %>% 
   ggplot(aes(x=JobLevel, y=count)) +
-  labs(title="Fig 5c. Shares of Recruiting Stages among Candidates of Each Job Level", 
+  labs(title="Fig 4c. Shares of Recruiting Stages among Candidates of Each Job Level", 
        x="Levels of Job", y="Shares of Recruiting Stages") +
   geom_bar(stat="identity", position="fill", aes(fill=Status)) + coord_flip()
+
+full_data %>%
+  filter(JobLevel != "Open Resume Submission", Source != "Import", Status != "New") %>% 
+  group_by(JobLevel, Status) %>% 
+  summarise(count=n()) %>% 
+  ggplot(aes(x=JobLevel, y=count)) +
+  labs(title="Fig 4c. Shares of Recruiting Stages among Candidates of Each Job Level", 
+       x="Levels of Job", y="Shares of Recruiting Stages") +
+  geom_bar(stat="identity", position="fill", color = "white", aes(fill=Status)) + coord_flip()
 
 #fig4a <- plot_ly(x = data_5$JobLevel, y = data_5$n, name = "Test Plotly chart", type = "bar")
