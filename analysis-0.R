@@ -234,3 +234,67 @@ by_lvl <- rename(by_lvl,
                   HiringManagerCount=n.y.y.y,
                   InternalHireCount=n.x.x.x.x,
                   JobBoardCount=n.y.y.y.y)
+
+full_data_2 <- full_data %>% filter(SourceDetails=='LinkedIn')
+by_spec_LinkedIn <- create.by_spec(full_data_2, by_spec_LinkedIn)
+by_lvl_LinkedIn <- create.by_lvl(full_data_2, by_lvl_LinkedIn)
+
+full_data_2 <- full_data %>% filter(SourceDetails=='Indeed')
+by_spec_Indeed <- create.by_spec(full_data_2, by_spec_Indeed)
+by_lvl_Indeed <- create.by_lvl(full_data_2, by_lvl_Indeed)
+
+full_data_2 <- full_data %>% filter(SourceDetails=='Glassdoor')
+by_spec_Glassdoor <- create.by_spec(full_data_2, by_spec_Glassdoor)
+by_lvl_Glassdoor <- create.by_lvl(full_data_2, by_lvl_Glassdoor)
+
+full_data_2 <- full_data %>% filter(SourceDetails=='BuiltinNYC')
+by_spec_BuiltinNYC <- create.by_spec(full_data_2, by_spec_BuiltinNYC)
+by_lvl_BuiltinNYC <- create.by_lvl(full_data_2, by_lvl_BuiltinNYC)
+
+join.by_spec_JB <- function(by_spec, a, b, c, d){
+  by_spec <- data.frame()
+  by_spec <- full_join(a, b, by=c("Category"="Category"))
+  by_spec <- full_join(by_spec, c, by=c("Category"="Category"))
+  by_spec <- full_join(by_spec, d, by=c("Category"="Category"))
+  return(by_spec)
+}
+
+by_spec_JB <- join.by_spec_JB(by_spec_JB,
+                              by_spec_LinkedIn,
+                              by_spec_Indeed,
+                              by_spec_Glassdoor,
+                              by_spec_BuiltinNYC)
+rm(by_spec_LinkedIn,
+   by_spec_Indeed,
+   by_spec_Glassdoor,
+   by_spec_BuiltinNYC)
+
+by_spec_JB <- rename(by_spec_JB,
+                     LinkedInCount=n.x,
+                     IndeedCount=n.y,
+                     GlassdoorCount=n.x.x,
+                     BuiltinNYCCount=n.y.y)
+
+join.by_lvl_JB <- function(by_lvl, a, b, c, d){
+  by_lvl <- data.frame()
+  by_lvl <- full_join(a, b, by=c("JobLevel"="JobLevel"))
+  by_lvl <- full_join(by_lvl, c, by=c("JobLevel"="JobLevel"))
+  by_lvl <- full_join(by_lvl, d, by=c("JobLevel"="JobLevel"))
+  return(by_lvl)
+}
+
+by_lvl_JB <- join.by_lvl_JB(by_lvl_JB,
+                            by_lvl_LinkedIn,
+                            by_lvl_Indeed,
+                            by_lvl_Glassdoor,
+                            by_lvl_BuiltinNYC)
+rm(by_lvl_LinkedIn,
+   by_lvl_Indeed,
+   by_lvl_Glassdoor,
+   by_lvl_BuiltinNYC)
+
+by_lvl_JB <- rename(by_lvl_JB,
+                    LinkedInCount=n.x,
+                    IndeedCount=n.y,
+                    GlassdoorCount=n.x.x,
+                    BuiltinNYCCount=n.y.y)
