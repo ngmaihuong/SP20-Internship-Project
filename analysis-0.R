@@ -175,6 +175,25 @@ by_spec <- join.by_spec(by_spec,
                         by_spec_IH, 
                         by_spec_JB)
 
+rm(by_spec_AG, 
+   by_spec_CR, 
+   by_spec_CA, 
+   by_spec_EM, 
+   by_spec_ER, 
+   by_spec_HR, 
+   by_spec_IH, 
+   by_spec_JB)
+
+by_spec <- rename(by_spec, 
+                  AgencyCount=n.x, 
+                  CareerSiteCount=n.y, 
+                  CampusCount=n.x.x, 
+                  EmployeeCount=n.y.y,
+                  ExternalReferralCount=n.x.x.x,
+                  HiringManagerCount=n.y.y.y,
+                  InternalHireCount=n.x.x.x.x,
+                  JobBoardCount=n.y.y.y.y)
+
 join.by_lvl <- function(by_lvl, a, b, c, d, e , f, g, h){
   by_lvl <- data.frame()
   by_lvl <- full_join(a, b, by=c("JobLevel"="JobLevel"))
@@ -196,3 +215,22 @@ by_lvl <- join.by_lvl(by_lvl,
                       by_lvl_HR, 
                       by_lvl_IH, 
                       by_lvl_JB)
+
+rm(by_lvl_AG, 
+   by_lvl_CR, 
+   by_lvl_CA, 
+   by_lvl_EM, 
+   by_lvl_ER, 
+   by_lvl_HR, 
+   by_lvl_IH, 
+   by_lvl_JB)
+
+by_lvl <- rename(by_lvl, 
+                  AgencyCount=n.x, 
+                  CareerSiteCount=n.y, 
+                  CampusCount=n.x.x, 
+                  EmployeeCount=n.y.y,
+                  ExternalReferralCount=n.x.x.x,
+                  HiringManagerCount=n.y.y.y,
+                  InternalHireCount=n.x.x.x.x,
+                  JobBoardCount=n.y.y.y.y)
