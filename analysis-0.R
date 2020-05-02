@@ -194,6 +194,8 @@ by_spec <- rename(by_spec,
                   InternalHireCount=n.x.x.x.x,
                   JobBoardCount=n.y.y.y.y)
 
+by_spec[is.na(by_spec)] <- 0 #Replace all NA's with 0's
+
 join.by_lvl <- function(by_lvl, a, b, c, d, e , f, g, h){
   by_lvl <- data.frame()
   by_lvl <- full_join(a, b, by=c("JobLevel"="JobLevel"))
@@ -235,6 +237,9 @@ by_lvl <- rename(by_lvl,
                   InternalHireCount=n.x.x.x.x,
                   JobBoardCount=n.y.y.y.y)
 
+by_lvl[is.na(by_lvl)] <- 0 #Replace all NA's with 0's
+
+#Create new data frames to evaluate the number of application coming from each job board
 full_data_2 <- full_data %>% filter(SourceDetails=='LinkedIn')
 by_spec_LinkedIn <- create.by_spec(full_data_2, by_spec_LinkedIn)
 by_lvl_LinkedIn <- create.by_lvl(full_data_2, by_lvl_LinkedIn)
@@ -275,6 +280,8 @@ by_spec_JB <- rename(by_spec_JB,
                      GlassdoorCount=n.x.x,
                      BuiltinNYCCount=n.y.y)
 
+by_spec_JB[is.na(by_spec_JB)] <- 0 #Replace all NA's with 0's
+
 join.by_lvl_JB <- function(by_lvl, a, b, c, d){
   by_lvl <- data.frame()
   by_lvl <- full_join(a, b, by=c("JobLevel"="JobLevel"))
@@ -298,3 +305,5 @@ by_lvl_JB <- rename(by_lvl_JB,
                     IndeedCount=n.y,
                     GlassdoorCount=n.x.x,
                     BuiltinNYCCount=n.y.y)
+
+by_lvl_JB[is.na(by_lvl_JB)] <- 0 #Replace all NA's with 0's
