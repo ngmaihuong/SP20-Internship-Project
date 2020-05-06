@@ -1,13 +1,12 @@
 #Name: Nguyen, Sierra
 #Dickinson College
 #Date created: 4/2/2020
-#Date last updated: 5/2/2020
+#Date last updated: 5/5/2020
 #Project: Talent Acquisition Analytics SP20
 
 #Opening Tools ----
 library(base)
 library(httr)
-library(readxl)
 library(ggplot2)
 library(forcats)
 library(dplyr)
@@ -17,9 +16,9 @@ library(arsenal)
 library(lubridate)
 library(plotrix)
 library(plotly)
-library(wesanderson)
 library(RColorBrewer)
 library(data.table)
+library(e1071)
 
 #Set Working Directory ----
 setwd("~/Downloads/Suzy_02122020223915/Candidates")
@@ -109,7 +108,9 @@ full_data %>%
 
 #Model Building ----
 
-#Question 1 Modeling ----
+#Question 1 ----
+
+#Modeling ----
 #Define functions that create new data frames by Category and JobLevel based on Source and/or SourceDetails
 create.by_spec <- function(df, new_df_spec){
   new_df_spec <- data.frame()
@@ -309,7 +310,7 @@ by_lvl_JB <- rename(by_lvl_JB,
 
 by_lvl_JB[is.na(by_lvl_JB)] <- 0 #Replace all NA's with 0's
 
-#Question 1 Graphing ----
+#Graphing ----
 
 #Reshape the data frames for graphing
 
@@ -363,9 +364,9 @@ by_lvl_JB %>%
   geom_bar(stat="identity", position="dodge", aes(fill=TypeCount)) +
   coord_flip()
 
-#Question 2 
+#Question 2 ----
 
-#2.1. Applicants per Hire Comparison ----
+#2.1. Applicants per Hire Comparison among Sources ----
 #Modeling ----
 
 #Define Applicants per Hire function: x = # for a position, y = # for the whole group, ratio = name of the result
@@ -445,7 +446,7 @@ ind_aphratio <- setNames(cbind(rownames(ind_aphratio), ind_aphratio, row.names =
 #Graphing ----
 ind_aphratio %>% ggplot(aes(x=reorder(Source, APHratio), y=APHratio)) + 
   geom_bar(stat="identity", fill="maroon") + 
-  labs(title="Fig 7. Applicants per Hire ratios by Source", x="Source", y="Applicants per Hire ratio") +
+  labs(title="Fig 7a. Applicants per Hire ratios by Source", x="Source", y="Applicants per Hire ratio") +
   coord_flip()
 
 rm(Agency, 
@@ -457,29 +458,67 @@ rm(Agency,
    InternalHire, 
    JobBoard)
 
-#2.2. Hypothesis Testing ----
+#2.2. Applicants per Hire Comparison among Popular Job Boards ----
 #Modeling ----
-#Job boards
+
 ind_board <- full_data %>% filter(SourceDetails=='LinkedIn')
 x <- length(which("Hired" == ind_board$Status))
 y <- length(ind_board$Status)
-aphratio_LinkedIn <- aphratio(aphratio_LinkedIn, x, y)
+LinkedIn <- aphratio(LinkedIn, x, y)
 
 ind_board <- full_data %>% filter(SourceDetails=='Indeed')
 x <- length(which("Hired" == ind_board$Status))
 y <- length(ind_board$Status)
-aphratio_Indeed <- aphratio(aphratio_Indeed, x, y)
+Indeed <- aphratio(Indeed, x, y)
 
 ind_board <- full_data %>% filter(SourceDetails=='Glassdoor')
 x <- length(which("Hired" == ind_board$Status))
 y <- length(ind_board$Status)
-aphratio_Glassdoor <- aphratio(aphratio_Glassdoor, x, y)
+Glassdoor <- aphratio(Glassdoor, x, y)
 
 ind_board <- full_data %>% filter(SourceDetails=='BuiltinNYC')
 x <- length(which("Hired" == ind_board$Status))
 y <- length(ind_board$Status)
-aphratio_BuiltinNYC <- aphratio(aphratio_BuiltinNYC, x, y)
+BuiltinNYC <- aphratio(BuiltinNYC, x, y)
 
 rm(ind_board, x, y)
 
-#Testing ----
+jb_aphratio <- data.frame(LinkedIn,
+                          Glassdoor,
+                          Indeed,
+                          BuiltinNYC)
+jb_aphratio_0 <- transpose(jb_aphratio)
+colnames(jb_aphratio_0) <- rownames(jb_aphratio)
+rownames(jb_aphratio_0) <- colnames(jb_aphratio)
+jb_aphratio <- jb_aphratio_0
+rm(jb_aphratio_0)
+
+jb_aphratio <- setNames(cbind(rownames(jb_aphratio), jb_aphratio, row.names = NULL), 
+                         c("JobBoard", "APHratio"))
+#Graphing ----
+
+jb_aphratio %>% ggplot(aes(x=reorder(JobBoard, APHratio), y=APHratio)) + 
+  geom_bar(stat="identity", fill="dark blue") + 
+  labs(title="Fig 7b. Applicants per Hire ratios by Job Board", x="Job Board", y="Applicants per Hire ratio") +
+  coord_flip()
+
+rm(LinkedIn,
+   Glassdoor,
+   Indeed,
+   BuiltinNYC)
+
+#Question 3 ----
+
+#Add new column "Hired" as class labels
+full_data$Hired <- ifelse(full_data$Status == 'Hired', 1, 0)
+
+#Sampling 1% of total observations ----
+set.seed(100)
+train_data <- full_data %>% group_by(Hired) %>% sample_frac(0.01)
+test_data <- full_data %>% anti_join(train_data)
+
+#Modeling ----
+model <- naiveBayes(Hired ~ RequisitionTitle+Category+Source+SourceDetails+Origin, train_data)
+
+#Display model ----
+model
