@@ -1,7 +1,7 @@
 #Name: Nguyen, Sierra
 #Dickinson College
 #Date created: 4/2/2020
-#Date last updated: 5/13/2020
+#Date last updated: 5/14/2020
 #Project: Talent Acquisition Analytics SP20
 
 #Opening Tools ----
@@ -342,6 +342,8 @@ by_lvl_JB <- by_lvl_JB %>% gather(TypeCount, Count, LinkedInCount:BuiltinNYCCoun
 
 #Supporting information
 
+data_7 <- full_join(data_2, ind_aphratio, by=c("Source"="Source"))
+
 data_1_a <- full_data %>% filter(!is.na(SourceDetails), Source=="Job Board") %>% 
   group_by(Category) %>% count() %>% arrange(desc(n)) %>% 
   rename('Number of Candidates from Job Boards'=n)
@@ -477,11 +479,16 @@ ind_aphratio <- setNames(cbind(rownames(ind_aphratio), ind_aphratio, row.names =
 
 ind_aphratio <- arrange(ind_aphratio, desc(APHratio))
 
+#Supporting information
+data_2$Source <- gsub(" ", "", data_2$Source, fixed = TRUE)
+data_7 <- full_join(data_2, ind_aphratio, by=c("Source"="Source"))
+data_7 <- data_7 %>% filter(!is.na(APHratio)) %>% arrange(desc(APHratio))
+
 #Graphing ----
-ind_aphratio %>% ggplot(aes(x=reorder(Source, APHratio), y=APHratio)) + 
-  geom_bar(stat="identity", fill="maroon") + 
-  labs(title="Fig 7a. Applicants per Hire ratios by Source", x="Source", y="Applicants per Hire ratio") +
-  coord_flip()
+# ind_aphratio %>% ggplot(aes(x=reorder(Source, APHratio), y=APHratio)) + 
+#   geom_bar(stat="identity", fill="maroon") + 
+#   labs(title="Fig 7a. Applicants per Hire ratios by Source", x="Source", y="Applicants per Hire ratio") +
+#   coord_flip()
 
 rm(Agency, 
    Campus, 
@@ -533,7 +540,7 @@ jb_aphratio <- setNames(cbind(rownames(jb_aphratio), jb_aphratio, row.names = NU
 
 jb_aphratio %>% ggplot(aes(x=reorder(JobBoard, APHratio), y=APHratio)) + 
   geom_bar(stat="identity", fill="dark blue") + 
-  labs(title="Fig 7b. Applicants per Hire ratios by \nFour Popular Job Boards", x="Job Board", y="Applicants per Hire ratio") +
+  labs(title="Fig 7. Applicants per Hire ratios by Four Popular Job Boards", x="Job Board", y="Applicants per Hire ratio") +
   coord_flip()
 
 rm(LinkedIn,
@@ -544,15 +551,31 @@ rm(LinkedIn,
 #Question 3 ----
 
 #Add new column "Hired" as class labels
-full_data$Hired <- ifelse(full_data$Status == 'Hired', 1, 0)
+full_data$Hired <- ifelse(full_data$Status == 'Hired', 'Yes', 'No')
+full_data$Hired <- as.factor(full_data$Hired)
 
-#Sampling 1% of total observations ----
-set.seed(100)
-train_data <- full_data %>% group_by(Hired) %>% sample_frac(0.01)
+#Sampling 25% of total observations ----
+#set.seed(100)
+train_data <- full_data %>% 
+  group_by(Hired) %>% 
+  sample_frac(0.75)
 test_data <- full_data %>% anti_join(train_data)
+
+train_data <- train_data %>%
+  select(RequisitionTitle, Category, Source, SourceDetails, Origin, Hired)
+test_data <- test_data %>%
+  select(RequisitionTitle, Category, Source, SourceDetails, Origin, Hired)
 
 #Modeling ----
 model <- naiveBayes(Hired ~ RequisitionTitle+Category+Source+SourceDetails+Origin, train_data)
 
-#Display model ----
-model
+# Predicting with test_data
+results <- predict(model,test_data)
+
+# Comparing predictions with real results
+test_data <- data.frame(test_data, results)
+test_data$compare <- ifelse(test_data$Hired == test_data$results, T, F)
+
+#Computing Probability ----
+probability <- length(which(T==test_data$compare))/length(test_data$compare)
+probability
