@@ -1,7 +1,7 @@
 #Name: Nguyen, Sierra
 #Dickinson College
 #Date created: 4/2/2020
-#Date last updated: 5/5/2020
+#Date last updated: 5/13/2020
 #Project: Talent Acquisition Analytics SP20
 
 #Opening Tools ----
@@ -20,7 +20,7 @@ library(RColorBrewer)
 library(data.table)
 library(e1071)
 
-#Set Working Directory ----
+#Setting Working Directory ----
 setwd("~/Downloads/Suzy_02122020223915/Candidates")
 
 #Importing Data ----
@@ -31,17 +31,23 @@ summary(full_data) #Display summary statistics of the dataset
 
 #Display the number of candidates in each variable of interest for visibility only
 data_0 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(RequisitionTitle) %>% count(RequisitionTitle)%>% arrange(desc(n))
+  group_by(RequisitionTitle) %>% count(RequisitionTitle)%>% arrange(desc(n)) %>% 
+  rename('Number of Candidates'=n)
 data_1 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(Category) %>% count(Category) %>% arrange(desc(n))
+  group_by(Category) %>% count(Category) %>% arrange(desc(n)) %>% 
+  rename('Number of Candidates'=n)
 data_2 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(Source) %>% count(Source) %>% arrange(desc(n))
+  group_by(Source) %>% count(Source) %>% arrange(desc(n)) %>% 
+  rename('Number of Candidates'=n)
 data_3 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(SourceDetails) %>% count(SourceDetails) %>% arrange(desc(n))
+  group_by(SourceDetails) %>% count(SourceDetails) %>% arrange(desc(n)) %>% 
+  rename('Number of Candidates'=n)
 data_4 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(Status) %>% count(Status) %>% arrange(desc(n))
+  group_by(Status) %>% count(Status) %>% arrange(desc(n)) %>% 
+  rename('Number of Candidates'=n)
 data_5 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(JobLevel) %>% count(JobLevel) %>% arrange(desc(n))
+  group_by(JobLevel) %>% count(JobLevel) %>% arrange(desc(n)) %>% 
+  rename('Number of Candidates'=n)
 #These are not necessary for ggplot2. Most of the time, ggplot2 will automatically count.
 
 #Examine number of candidates coming from Job Board
@@ -334,10 +340,34 @@ by_lvl_JB <- by_lvl_JB %>% gather(TypeCount, Count, LinkedInCount:BuiltinNYCCoun
   separate(TypeCount, c("TypeCount", "empty"), sep="Count") %>%
   select(-empty)
 
+#Supporting information
+
+data_1_a <- full_data %>% filter(!is.na(SourceDetails), Source=="Job Board") %>% 
+  group_by(Category) %>% count() %>% arrange(desc(n)) %>% 
+  rename('Number of Candidates from Job Boards'=n)
+
+data_1_b <- full_data[full_data$SourceDetails %in% c('LinkedIn', 'Indeed', 'Glassdoor', 'BuiltinNYC'),]
+data_1_b <- data_1_b %>% group_by(Category) %>% 
+  count(Category) %>% arrange(desc(n)) %>% 
+  rename('Number of Candidates from 4 Specified Job Boards'=n)
+
+data_6 <- full_data %>% select(Category, RequisitionTitle)
+data_6 <- data_6[!duplicated(data_6$RequisitionTitle),]
+data_6 <- data_6 %>% group_by(Category) %>% count() %>% arrange(desc(n)) %>% 
+  rename('Number of Requisitions'=n)
+data_6 <- full_join(data_6, data_1, by=c("Category"="Category"))
+data_6 <- full_join(data_6, data_1_a, by=c("Category"="Category"))
+data_6 <- full_join(data_6, data_1_b, by=c("Category"="Category"))
+
+data_6 <- data_6 %>% mutate(new = (`Number of Candidates from 4 Specified Job Boards`/
+                                     `Number of Candidates from Job Boards`)*100) %>%
+  rename('% of Candidates from 4 Specified Job Boards out of all Job Boards'=new)
+
 #Graphing
 
 by_spec %>%
   group_by(Category, TypeCount) %>%
+  #filter(TypeCount != 'CareerSite') %>%
   ggplot(aes(x=Category, y=Count)) +
   labs(title="Fig 5a. Types of Source by Candidates from Each Category", x="Category", y="Count") +
   geom_bar(stat="identity", position="dodge", aes(fill=TypeCount)) +
@@ -345,6 +375,7 @@ by_spec %>%
 
 by_lvl %>%
   group_by(JobLevel, TypeCount) %>%
+  filter(JobLevel != "Open Resume Submission") %>%
   ggplot(aes(x=JobLevel, y=Count)) +
   labs(title="Fig 5b. Types of Source by Candidates from Each Job Level", x="Level of Job", y="Count") +
   geom_bar(stat="identity", position="dodge", aes(fill=TypeCount)) +
@@ -359,6 +390,7 @@ by_spec_JB %>%
 
 by_lvl_JB %>%
   group_by(JobLevel, TypeCount) %>%
+  filter(JobLevel != "Open Resume Submission") %>%
   ggplot(aes(x=JobLevel, y=Count)) +
   labs(title="Fig 6b. Job Boards by Candidates from Each Job Level", x="Level of Job", y="Count") +
   geom_bar(stat="identity", position="dodge", aes(fill=TypeCount)) +
@@ -443,6 +475,8 @@ rm(ind_aphratio_0)
 ind_aphratio <- setNames(cbind(rownames(ind_aphratio), ind_aphratio, row.names = NULL), 
          c("Source", "APHratio"))
 
+ind_aphratio <- arrange(ind_aphratio, desc(APHratio))
+
 #Graphing ----
 ind_aphratio %>% ggplot(aes(x=reorder(Source, APHratio), y=APHratio)) + 
   geom_bar(stat="identity", fill="maroon") + 
@@ -499,7 +533,7 @@ jb_aphratio <- setNames(cbind(rownames(jb_aphratio), jb_aphratio, row.names = NU
 
 jb_aphratio %>% ggplot(aes(x=reorder(JobBoard, APHratio), y=APHratio)) + 
   geom_bar(stat="identity", fill="dark blue") + 
-  labs(title="Fig 7b. Applicants per Hire ratios by Job Board", x="Job Board", y="Applicants per Hire ratio") +
+  labs(title="Fig 7b. Applicants per Hire ratios by \nFour Popular Job Boards", x="Job Board", y="Applicants per Hire ratio") +
   coord_flip()
 
 rm(LinkedIn,
