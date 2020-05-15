@@ -1,7 +1,7 @@
 #Name: Nguyen, Sierra
 #Dickinson College
 #Date created: 4/2/2020
-#Date last updated: 5/14/2020
+#Date last updated: 5/15/2020
 #Project: Talent Acquisition Analytics SP20
 
 #Opening Tools ----
@@ -554,28 +554,65 @@ rm(LinkedIn,
 full_data$Hired <- ifelse(full_data$Status == 'Hired', 'Yes', 'No')
 full_data$Hired <- as.factor(full_data$Hired)
 
-#Sampling 25% of total observations ----
-#set.seed(100)
-train_data <- full_data %>% 
-  group_by(Hired) %>% 
-  sample_frac(0.75)
-test_data <- full_data %>% anti_join(train_data)
+#Modeling and Model Execution ----
+p_vals <- replicate(
+  1000,
+  {
+    #Sampling 25% of total observations
+    train_data <- full_data %>% 
+      group_by(Hired) %>% 
+      sample_frac(0.75)
+    suppressMessages(test_data <- full_data %>% anti_join(train_data))
+    
+    #Naive Bayes modeling
+    model <- naiveBayes(Hired ~ RequisitionTitle+Category+Source+SourceDetails+Origin, train_data)
+    
+    #Predicting with test_data
+    results <- predict(model,test_data)
+    
+    #Comparing predictions with real data
+    test_data <- data.frame(test_data, results)
+    test_data$compare <- ifelse(test_data$Hired == test_data$results, T, F)
+    
+    #Computing probability for whole dataset
+    probability <- length(which(T==test_data$compare))/length(test_data$compare)
+  }
+)
 
-train_data <- train_data %>%
-  select(RequisitionTitle, Category, Source, SourceDetails, Origin, Hired)
-test_data <- test_data %>%
-  select(RequisitionTitle, Category, Source, SourceDetails, Origin, Hired)
+p_vals_positive <- replicate(
+  1000,
+  {
+    #Sampling 25% of total observations
+    train_data <- full_data %>% 
+      group_by(Hired) %>% 
+      sample_frac(0.75)
+    suppressMessages(test_data <- full_data %>% anti_join(train_data))
+    
+    #Naive Bayes modeling
+    model <- naiveBayes(Hired ~ RequisitionTitle+Category+Source+SourceDetails+Origin, train_data)
+    
+    #Predicting with test_data
+    results <- predict(model,test_data)
+    
+    #Comparing predictions with real data
+    test_data <- data.frame(test_data, results)
+    test_data$compare <- ifelse(test_data$Hired == test_data$results, T, F)
+    test_data_1 <- test_data %>% filter(Hired == "Yes")
+    
+    #Computing probability for Hired candidates
+    probability_1 <- length(which(T==test_data_1$compare))/length(test_data_1$compare)
+  }
+)
 
-#Modeling ----
-model <- naiveBayes(Hired ~ RequisitionTitle+Category+Source+SourceDetails+Origin, train_data)
+#Graphing ----
+p_df <- data.frame(p_vals, p_vals_positive)
 
-# Predicting with test_data
-results <- predict(model,test_data)
+p_df %>% ggplot(aes(x=p_vals)) +
+  geom_histogram(aes(y=..density..), binwidth = 0.0006, fill="light blue", color="dark blue") +
+  geom_density(adjust=1.5, color="maroon") +
+  labs(title="Fig 8a. Distribution of Probability \nof Correct Naive Bayes Prediction for all observations", x="probability")
 
-# Comparing predictions with real results
-test_data <- data.frame(test_data, results)
-test_data$compare <- ifelse(test_data$Hired == test_data$results, T, F)
-
-#Computing Probability ----
-probability <- length(which(T==test_data$compare))/length(test_data$compare)
-probability
+p_df %>% ggplot(aes(x=p_vals_positive)) +
+  geom_histogram(aes(y=..density..), binwidth = 0.05, fill="gold", color="orange") +
+  geom_density(adjust=2, color="purple") +
+  labs(title="Fig 8b. Distribution of Probability \nof Correct Naive Bayes Prediction for 'Hired' observations", x="probability")
