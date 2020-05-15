@@ -609,10 +609,10 @@ p_df <- data.frame(p_vals, p_vals_positive)
 
 p_df %>% ggplot(aes(x=p_vals)) +
   geom_histogram(aes(y=..density..), binwidth = 0.0006, fill="light blue", color="dark blue") +
-  geom_density(adjust=1.5, color="maroon") +
+  geom_density(adjust=1, color="maroon") +
   labs(title="Fig 8a. Distribution of Probability \nof Correct Naive Bayes Prediction for all observations", x="probability")
 
 p_df %>% ggplot(aes(x=p_vals_positive)) +
-  geom_histogram(aes(y=..density..), binwidth = 0.05, fill="gold", color="orange") +
-  geom_density(adjust=2, color="purple") +
+  geom_histogram(aes(y=..density..), binwidth = 0.05, fill="light blue", color="dark blue") +
+  geom_density(adjust=2, color="maroon") +
   labs(title="Fig 8b. Distribution of Probability \nof Correct Naive Bayes Prediction for 'Hired' observations", x="probability")
