@@ -463,22 +463,6 @@ for (i in 1:length(df_board$SourceDetails)){
 
 df_board[is.na(df_board)] <- 0
 
-#Graphing ----
-
-df_source <- df_source %>% mutate(Group = 'Source') %>% rename(Detail=Source)
-df_board <- df_board %>% mutate(Group = 'Job Board') %>% rename(Detail=SourceDetails)
-df_category <- df_category %>% mutate(Group = 'Category') %>% rename(Detail=Category)
-df_level <- df_level %>% mutate(Group = 'Job Level') %>% rename(Detail=JobLevel)
-
-df <- rbind(df_source, df_board, df_category, df_level)
-
-df$APHratio <- as.numeric(unlist(df$APHratio))
-
-df %>% group_by(Group, Detail) %>%
-  ggplot(aes(x=Group, y=APHratio)) +
-  labs(title="Fig 7. Applicants per Hire ratio by Groups", x="Group", y="Applicants per Hire ratio") +
-  geom_bar(stat="identity", position="dodge", aes(fill=Detail))
-
 #Question 3 ----
 
 #Add new column "Hired" as class labels
