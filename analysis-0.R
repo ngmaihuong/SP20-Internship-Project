@@ -1,7 +1,7 @@
 #Name: Nguyen, Sierra
 #Dickinson College
 #Date created: 4/2/2020
-#Date last updated: 5/22/2020
+#Date last updated: 5/23/2020
 #Project: Talent Acquisition Analytics SP20
 
 #Opening Tools ----
@@ -61,14 +61,13 @@ data_5 <- full_data %>%
 
 #Examine number of candidates coming from Job Board
 full_data_0 <- full_data
-#full_data_0$Source <- ifelse(full_data_0$Source == "Job Board", T, F)
-#full_data_0 <- full_data_0 %>% filter(Source == T) #11,058 observations
 full_data_0$Source <- ifelse(full_data_0$Source == "Job Board", "Job Board", NA)
 full_data_0 <- full_data_0  %>% filter(!is.na(Source))
 data_3a <- full_data_0 %>% 
   filter(!is.na(SourceDetails)) %>% 
   group_by(SourceDetails) %>% 
-  count(SourceDetails) %>% arrange(desc(n))
+  count(SourceDetails) %>% 
+  arrange(desc(n))
 
 #Survey and Visualize ----
 
@@ -415,12 +414,6 @@ by_lvl_JB %>%
 #2.1. Applicants per Hire Comparison among Sources ----
 #Modeling ----
 
-#Define Applicants per Hire function: x = # for a position, y = # for the whole group, ratio = name of the result
-aphratio <- function(ratio, x, y){
-  ratio = x/y
-  return(ratio)
-}
-
 #All sources = Total # of applicants / Total # of hired
 aphratio_all <- length(which("Hired" == full_data$Status)) / length(full_data$Status)
 
@@ -428,87 +421,62 @@ aphratio_all <- length(which("Hired" == full_data$Status)) / length(full_data$St
 df_category <- full_data %>% group_by(Status, Category) %>% count() %>% 
   filter(Status=='Hired') %>% rename('Number of Hires'=n)
 df_category <- full_join(data_1, df_category)
-df_category <- df_category %>% select(-Status) %>% mutate(aph_category=c(NA))
-
-df_category <- mutate(df_category, aph_category=aphratio(aph_category, df_category[,3], df_category[,2]))
+df_category <- df_category %>% select(-Status) %>% mutate(aph_category=NA)
 
 for (i in 1:length(df_category$Category)){
   df_category$aph_category[i] <- df_category[i,3]/df_category[i,2]
 }
 
+df_category[is.na(df_category)] <- 0
+
 #APH ratio for each Job Level
 df_level <- full_data %>% group_by(Status, JobLevel) %>% count() %>% 
   filter(Status=='Hired') %>% rename('Number of Hires'=n)
 df_level <- full_join(data_5, df_level)
-df_level <- df_level %>% select(-Status) %>% mutate(aph_level=c(NA)) %>%
+df_level <- df_level %>% select(-Status) %>% mutate(aph_level=NA) %>%
   filter(JobLevel != 'Open Resume Submission')
-
-df_level <- mutate(df_level, aph_level=aphratio(aph_level, df_level[,3], df_level[,2]))
 
 for (i in 1:length(df_level$JobLevel)){
   df_level$aph_level[i] <- df_level[i,3]/df_level[i,2]
 }
 
+df_level[is.na(df_level)] <- 0
+
 #APH ratio for each Type of Source
 df_source <- full_data %>% group_by(Status, Source) %>% count() %>% 
   filter(Status=='Hired') %>% rename('Number of Hires'=n)
 df_source <- full_join(data_2, df_source)
-df_source <- df_source %>% select(-Status) %>% mutate(aph_source=c(NA)) %>% filter(Source!='Import')
-
-df_source <- mutate(df_source, aph_source=aphratio(aph_source, df_source[,3], df_source[,2]))
+df_source <- df_source %>% select(-Status) %>% mutate(aph_source=NA) %>% 
+  filter(Source!='Import')
 
 for (i in 1:length(df_source$Source)){
   df_source$aph_source[i] <- df_source[i,3]/df_source[i,2]
 }
 
+df_source[is.na(df_source)] <- 0
+
 #2.2. Applicants per Hire Comparison among Popular Job Boards ----
 #Modeling ----
 
-ind_board <- full_data %>% filter(SourceDetails=='LinkedIn')
-x <- length(which("Hired" == ind_board$Status))
-y <- length(ind_board$Status)
-LinkedIn <- aphratio(LinkedIn, x, y)
+df_board <- full_data_0 %>% group_by(Status, SourceDetails) %>% count() %>% 
+  filter(Status=='Hired') %>% rename('Number of Hires'=n)
+df_board <- full_join(data_3a, df_board)
+df_board <- df_board %>% select(-Status) %>% mutate(aph_board=NA)
 
-ind_board <- full_data %>% filter(SourceDetails=='Indeed')
-x <- length(which("Hired" == ind_board$Status))
-y <- length(ind_board$Status)
-Indeed <- aphratio(Indeed, x, y)
+for (i in 1:length(df_board$SourceDetails)){
+  df_board$aph_board[i] <- df_board[i,3]/df_board[i,2]
+}
 
-ind_board <- full_data %>% filter(SourceDetails=='Glassdoor')
-x <- length(which("Hired" == ind_board$Status))
-y <- length(ind_board$Status)
-Glassdoor <- aphratio(Glassdoor, x, y)
+df_board[is.na(df_board)] <- 0
 
-ind_board <- full_data %>% filter(SourceDetails=='BuiltinNYC')
-x <- length(which("Hired" == ind_board$Status))
-y <- length(ind_board$Status)
-BuiltinNYC <- aphratio(BuiltinNYC, x, y)
+df_board <- df_board[df_board$SourceDetails %in% c('LinkedIn', 'Indeed', 'Glassdoor', 'BuiltinNYC'),]
 
-rm(ind_board, x, y)
-
-jb_aphratio <- data.frame(LinkedIn,
-                          Glassdoor,
-                          Indeed,
-                          BuiltinNYC)
-jb_aphratio_0 <- transpose(jb_aphratio)
-colnames(jb_aphratio_0) <- rownames(jb_aphratio)
-rownames(jb_aphratio_0) <- colnames(jb_aphratio)
-jb_aphratio <- jb_aphratio_0
-rm(jb_aphratio_0)
-
-jb_aphratio <- setNames(cbind(rownames(jb_aphratio), jb_aphratio, row.names = NULL), 
-                         c("JobBoard", "APHratio"))
 #Graphing ----
 
-jb_aphratio %>% ggplot(aes(x=reorder(JobBoard, APHratio), y=APHratio)) + 
+df_board %>% ggplot(aes(x=reorder(SourceDetails, n), y=aph_board)) + 
   geom_bar(stat="identity", fill="dark blue") + 
   labs(title="Fig 7. Applicants per Hire ratios by Four Popular Job Boards", x="Job Board", y="Applicants per Hire ratio") +
   coord_flip()
-
-rm(LinkedIn,
-   Glassdoor,
-   Indeed,
-   BuiltinNYC)
 
 #Question 3 ----
 
