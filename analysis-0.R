@@ -5,16 +5,12 @@
 #Project: Talent Acquisition Analytics SP20
 
 #Opening Tools ----
-library(base)
 library(ggplot2)
 library(forcats)
 library(dplyr)
 library(tidyr)
-library(GGally)
 library(plotrix)
 library(plotly)
-library(RColorBrewer)
-library(data.table)
 library(e1071)
 
 #Setting Working Directory ----
@@ -411,20 +407,17 @@ by_lvl_JB %>%
 
 #Question 2 ----
 
-#2.1. Applicants per Hire Comparison among Sources ----
-#Modeling ----
-
-#All sources = Total # of applicants / Total # of hired
+#Total APH ratio = Total # of applicants / Total # of hired
 aphratio_all <- length(which("Hired" == full_data$Status)) / length(full_data$Status)
 
 #APH ratio for each Job Category
 df_category <- full_data %>% group_by(Status, Category) %>% count() %>% 
   filter(Status=='Hired') %>% rename('Number of Hires'=n)
 df_category <- full_join(data_1, df_category)
-df_category <- df_category %>% select(-Status) %>% mutate(aph_category=NA)
+df_category <- df_category %>% select(-Status) %>% mutate(APHratio=NA)
 
 for (i in 1:length(df_category$Category)){
-  df_category$aph_category[i] <- df_category[i,3]/df_category[i,2]
+  df_category$APHratio[i] <- df_category[i,3]/df_category[i,2]
 }
 
 df_category[is.na(df_category)] <- 0
@@ -433,11 +426,11 @@ df_category[is.na(df_category)] <- 0
 df_level <- full_data %>% group_by(Status, JobLevel) %>% count() %>% 
   filter(Status=='Hired') %>% rename('Number of Hires'=n)
 df_level <- full_join(data_5, df_level)
-df_level <- df_level %>% select(-Status) %>% mutate(aph_level=NA) %>%
+df_level <- df_level %>% select(-Status) %>% mutate(APHratio=NA) %>%
   filter(JobLevel != 'Open Resume Submission')
 
 for (i in 1:length(df_level$JobLevel)){
-  df_level$aph_level[i] <- df_level[i,3]/df_level[i,2]
+  df_level$APHratio[i] <- df_level[i,3]/df_level[i,2]
 }
 
 df_level[is.na(df_level)] <- 0
@@ -446,37 +439,26 @@ df_level[is.na(df_level)] <- 0
 df_source <- full_data %>% group_by(Status, Source) %>% count() %>% 
   filter(Status=='Hired') %>% rename('Number of Hires'=n)
 df_source <- full_join(data_2, df_source)
-df_source <- df_source %>% select(-Status) %>% mutate(aph_source=NA) %>% 
+df_source <- df_source %>% select(-Status) %>% mutate(APHratio=NA) %>% 
   filter(Source!='Import')
 
 for (i in 1:length(df_source$Source)){
-  df_source$aph_source[i] <- df_source[i,3]/df_source[i,2]
+  df_source$APHratio[i] <- df_source[i,3]/df_source[i,2]
 }
 
 df_source[is.na(df_source)] <- 0
 
-#2.2. Applicants per Hire Comparison among Popular Job Boards ----
-#Modeling ----
-
+#APH ratio for each Job Board
 df_board <- full_data_0 %>% group_by(Status, SourceDetails) %>% count() %>% 
   filter(Status=='Hired') %>% rename('Number of Hires'=n)
 df_board <- full_join(data_3a, df_board)
-df_board <- df_board %>% select(-Status) %>% mutate(aph_board=NA)
+df_board <- df_board %>% select(-Status) %>% mutate(APHratio=NA)
 
 for (i in 1:length(df_board$SourceDetails)){
-  df_board$aph_board[i] <- df_board[i,3]/df_board[i,2]
+  df_board$APHratio[i] <- df_board[i,3]/df_board[i,2]
 }
 
 df_board[is.na(df_board)] <- 0
-
-df_board <- df_board[df_board$SourceDetails %in% c('LinkedIn', 'Indeed', 'Glassdoor', 'BuiltinNYC'),]
-
-#Graphing ----
-
-df_board %>% ggplot(aes(x=reorder(SourceDetails, n), y=aph_board)) + 
-  geom_bar(stat="identity", fill="dark blue") + 
-  labs(title="Fig 7. Applicants per Hire ratios by Four Popular Job Boards", x="Job Board", y="Applicants per Hire ratio") +
-  coord_flip()
 
 #Question 3 ----
 
