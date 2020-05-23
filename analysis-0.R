@@ -1,19 +1,16 @@
 #Name: Nguyen, Sierra
 #Dickinson College
 #Date created: 4/2/2020
-#Date last updated: 5/16/2020
+#Date last updated: 5/22/2020
 #Project: Talent Acquisition Analytics SP20
 
 #Opening Tools ----
 library(base)
-library(httr)
 library(ggplot2)
 library(forcats)
 library(dplyr)
 library(tidyr)
 library(GGally)
-library(arsenal)
-library(lubridate)
 library(plotrix)
 library(plotly)
 library(RColorBrewer)
@@ -30,25 +27,37 @@ full_data <- read.csv("comp_data")
 summary(full_data) #Display summary statistics of the dataset
 
 #Display the number of candidates in each variable of interest for visibility only
-data_0 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(RequisitionTitle) %>% count(RequisitionTitle)%>% arrange(desc(n)) %>% 
+data_0 <- full_data %>% 
+  group_by(RequisitionTitle) %>% 
+  count(RequisitionTitle)%>% 
+  arrange(desc(n)) %>% 
   rename('Number of Candidates'=n)
-data_1 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(Category) %>% count(Category) %>% arrange(desc(n)) %>% 
+data_1 <- full_data %>% 
+  group_by(Category) %>% 
+  count(Category) %>% 
+  arrange(desc(n)) %>% 
   rename('Number of Candidates'=n)
-data_2 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(Source) %>% count(Source) %>% arrange(desc(n)) %>% 
+data_2 <- full_data %>% 
+  group_by(Source) %>% 
+  count(Source) %>% 
+  arrange(desc(n)) %>% 
   rename('Number of Candidates'=n)
-data_3 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(SourceDetails) %>% count(SourceDetails) %>% arrange(desc(n)) %>% 
+data_3 <- full_data %>% 
+  filter(!is.na(SourceDetails)) %>% #the only one with NA filtered
+  group_by(SourceDetails) %>% 
+  count(SourceDetails) %>% 
+  arrange(desc(n)) %>% 
   rename('Number of Candidates'=n)
-data_4 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(Status) %>% count(Status) %>% arrange(desc(n)) %>% 
+data_4 <- full_data %>% 
+  group_by(Status) %>% 
+  count(Status) %>% 
+  arrange(desc(n)) %>% 
   rename('Number of Candidates'=n)
-data_5 <- full_data %>% filter(!is.na(SourceDetails)) %>% 
-  group_by(JobLevel) %>% count(JobLevel) %>% arrange(desc(n)) %>% 
+data_5 <- full_data %>%  
+  group_by(JobLevel) %>% 
+  count(JobLevel) %>% 
+  arrange(desc(n)) %>% 
   rename('Number of Candidates'=n)
-#These are not necessary for ggplot2. Most of the time, ggplot2 will automatically count.
 
 #Examine number of candidates coming from Job Board
 full_data_0 <- full_data
@@ -56,7 +65,9 @@ full_data_0 <- full_data
 #full_data_0 <- full_data_0 %>% filter(Source == T) #11,058 observations
 full_data_0$Source <- ifelse(full_data_0$Source == "Job Board", "Job Board", NA)
 full_data_0 <- full_data_0  %>% filter(!is.na(Source))
-data_3a <- full_data_0 %>% filter(!is.na(SourceDetails)) %>% group_by(SourceDetails) %>% 
+data_3a <- full_data_0 %>% 
+  filter(!is.na(SourceDetails)) %>% 
+  group_by(SourceDetails) %>% 
   count(SourceDetails) %>% arrange(desc(n))
 
 #Survey and Visualize ----
@@ -105,11 +116,11 @@ full_data %>%
 
 full_data %>%
   filter(JobLevel != "Open Resume Submission", Source != "Import", Status != "New") %>% 
-  group_by(JobLevel, Status) %>% 
+  group_by(Source, Status) %>% 
   summarise(count=n()) %>% 
-  ggplot(aes(x=JobLevel, y=count)) +
-  labs(title="Fig 4c. Shares of Recruiting Stages among Candidates of Each Job Level", 
-       x="Levels of Job", y="Shares of Recruiting Stages") +
+  ggplot(aes(x=Source, y=count)) +
+  labs(title="Fig 4c. Shares of Recruiting Stages among Types of Source", 
+       x="Types of Source", y="Shares of Recruiting Stages") +
   geom_bar(stat="identity", position="fill", color = "white", aes(fill=Status)) + coord_flip()
 
 #Model Building ----
@@ -369,7 +380,7 @@ data_6 <- data_6 %>% mutate(new = (`Number of Candidates from 4 Specified Job Bo
 
 by_spec %>%
   group_by(Category, TypeCount) %>%
-  #filter(TypeCount != 'CareerSite') %>%
+  #filter(TypeCount != 'CareerSite', TypeCount != 'JobBoard') %>%
   ggplot(aes(x=Category, y=Count)) +
   labs(title="Fig 5a. Types of Source by Candidates from Each Category", x="Category", y="Count") +
   geom_bar(stat="identity", position="dodge", aes(fill=TypeCount)) +
@@ -377,6 +388,7 @@ by_spec %>%
 
 by_lvl %>%
   group_by(JobLevel, TypeCount) %>%
+  #filter(TypeCount != 'CareerSite', TypeCount != 'JobBoard') %>%
   filter(JobLevel != "Open Resume Submission") %>%
   ggplot(aes(x=JobLevel, y=Count)) +
   labs(title="Fig 5b. Types of Source by Candidates from Each Job Level", x="Level of Job", y="Count") +
@@ -409,95 +421,45 @@ aphratio <- function(ratio, x, y){
   return(ratio)
 }
 
-#Grouping data frames for calculation
-
 #All sources = Total # of applicants / Total # of hired
-x <- length(which("Hired" == full_data$Status))
-y <- length(full_data$Status)
-aphratio_all <- aphratio(aphratio_all, x, y)
+aphratio_all <- length(which("Hired" == full_data$Status)) / length(full_data$Status)
 
-#Individual sources
-ind_source <- full_data %>% filter(Source=='Career Site')
-x <- length(which("Hired" == ind_source$Status))
-y <- length(ind_source$Status)
-CareerSite <- aphratio(CareerSite, x, y)
+#APH ratio for each Job Category
+df_category <- full_data %>% group_by(Status, Category) %>% count() %>% 
+  filter(Status=='Hired') %>% rename('Number of Hires'=n)
+df_category <- full_join(data_1, df_category)
+df_category <- df_category %>% select(-Status) %>% mutate(aph_category=c(NA))
 
-ind_source <- full_data %>% filter(Source=='Job Board')
-x <- length(which("Hired" == ind_source$Status))
-y <- length(ind_source$Status)
-JobBoard <- aphratio(JobBoard, x, y)
+df_category <- mutate(df_category, aph_category=aphratio(aph_category, df_category[,3], df_category[,2]))
 
-ind_source <- full_data %>% filter(Source=='Employee')
-x <- length(which("Hired" == ind_source$Status))
-y <- length(ind_source$Status)
-Employee <- aphratio(Employee, x, y)
+for (i in 1:length(df_category$Category)){
+  df_category$aph_category[i] <- df_category[i,3]/df_category[i,2]
+}
 
-ind_source <- full_data %>% filter(Source=='Agency')
-x <- length(which("Hired" == ind_source$Status))
-y <- length(ind_source$Status)
-Agency <- aphratio(Agency, x, y)
+#APH ratio for each Job Level
+df_level <- full_data %>% group_by(Status, JobLevel) %>% count() %>% 
+  filter(Status=='Hired') %>% rename('Number of Hires'=n)
+df_level <- full_join(data_5, df_level)
+df_level <- df_level %>% select(-Status) %>% mutate(aph_level=c(NA)) %>%
+  filter(JobLevel != 'Open Resume Submission')
 
-ind_source <- full_data %>% filter(Source=='Campus')
-x <- length(which("Hired" == ind_source$Status))
-y <- length(ind_source$Status)
-Campus <- aphratio(Campus, x, y)
+df_level <- mutate(df_level, aph_level=aphratio(aph_level, df_level[,3], df_level[,2]))
 
-ind_source <- full_data %>% filter(Source=='Hiring Manager')
-x <- length(which("Hired" == ind_source$Status))
-y <- length(ind_source$Status)
-HiringManager <- aphratio(HiringManager, x, y)
+for (i in 1:length(df_level$JobLevel)){
+  df_level$aph_level[i] <- df_level[i,3]/df_level[i,2]
+}
 
-ind_source <- full_data %>% filter(Source=='Internal Hire')
-x <- length(which("Hired" == ind_source$Status))
-y <- length(ind_source$Status)
-InternalHire <- aphratio(InternalHire, x, y)
+#APH ratio for each Type of Source
+df_source <- full_data %>% group_by(Status, Source) %>% count() %>% 
+  filter(Status=='Hired') %>% rename('Number of Hires'=n)
+df_source <- full_join(data_2, df_source)
+df_source <- df_source %>% select(-Status) %>% mutate(aph_source=c(NA)) %>% filter(Source!='Import')
 
-ind_source <- full_data %>% filter(Source=='External Referral')
-x <- length(which("Hired" == ind_source$Status))
-y <- length(ind_source$Status)
-ExternalReferral <- aphratio(ExternalReferral, x, y)
+df_source <- mutate(df_source, aph_source=aphratio(aph_source, df_source[,3], df_source[,2]))
 
-rm(ind_source, x, y)
-
-#Create a data frame for graphing
-ind_aphratio <- data.frame(Agency, 
-                           Campus, 
-                           CareerSite, 
-                           Employee, 
-                           ExternalReferral, 
-                           HiringManager, 
-                           InternalHire, 
-                           JobBoard)
-ind_aphratio_0 <- transpose(ind_aphratio)
-colnames(ind_aphratio_0) <- rownames(ind_aphratio)
-rownames(ind_aphratio_0) <- colnames(ind_aphratio)
-ind_aphratio <- ind_aphratio_0
-rm(ind_aphratio_0)
-
-ind_aphratio <- setNames(cbind(rownames(ind_aphratio), ind_aphratio, row.names = NULL), 
-         c("Source", "APHratio"))
-
-ind_aphratio <- arrange(ind_aphratio, desc(APHratio))
-
-#Supporting information
-data_2$Source <- gsub(" ", "", data_2$Source, fixed = TRUE)
-data_7 <- full_join(data_2, ind_aphratio, by=c("Source"="Source"))
-data_7 <- data_7 %>% filter(!is.na(APHratio)) %>% arrange(desc(APHratio))
-
-#Graphing ----
-# ind_aphratio %>% ggplot(aes(x=reorder(Source, APHratio), y=APHratio)) + 
-#   geom_bar(stat="identity", fill="maroon") + 
-#   labs(title="Fig 7a. Applicants per Hire ratios by Source", x="Source", y="Applicants per Hire ratio") +
-#   coord_flip()
-
-rm(Agency, 
-   Campus, 
-   CareerSite, 
-   Employee, 
-   ExternalReferral, 
-   HiringManager, 
-   InternalHire, 
-   JobBoard)
+for (i in 1:length(df_source$Source)){
+  df_source$aph_source[i] <- df_source[i,3]/df_source[i,2]
+}
 
 #2.2. Applicants per Hire Comparison among Popular Job Boards ----
 #Modeling ----
@@ -622,3 +584,6 @@ p_df %>% ggplot(aes(x=p_vals_positive)) +
   labs(title="Fig 8b. Distribution of Probability \nof Correct Naive Bayes Prediction for 'Hired' observations", x="probability")
 
 mean(p_vals_positive)
+
+#load("/Users/Boo Boo/Downloads/Suzy_02122020223915/Candidates/sandbox-051720.RData")
+#write.csv(p_df, "prob_sample_1k.csv", row.names=T)
