@@ -90,7 +90,7 @@ fig3a <- fig3a %>% layout(title = 'Fig 3. Shares of Application Status', showleg
                           yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 fig3a
 
-#What source receives the highest quality applications?
+#Is it possible to predict a candidate’s chance of getting hired given the objective attributes of their application?
 full_data %>%
   filter(JobLevel != "Open Resume Submission", Source != "Import", Source != "Career Site") %>% 
   group_by(Source, JobLevel) %>% 
